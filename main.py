@@ -66,6 +66,7 @@ if __name__ == "__main__":
     # setting up logger
     logger = logging.getLogger(__name__)
     logging.basicConfig(filename=f'logs/{time.time()}.log', encoding='utf-8', level=logging.DEBUG)
+    logging.getLogger().addHandler(logging.StreamHandler())
 
     for company in companies:
         time.sleep(1)
